@@ -1,0 +1,259 @@
+@font-face {
+    font-family: 'Share Tech';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(./ShareTech-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Share Tech Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(./ShareTechMono-Regular.ttf);
+}
+
+html {
+    --default-bg: #334;
+    --input-bg: #112;
+    /* background: linear-gradient(350deg, rgb(17, 93, 66) 0%, rgb(12, 20, 93) 100%);  */
+    background-color: rgb(24, 24, 44);
+    color: #fff;
+    font-family: 'Share Tech';
+    font-size: 20px;
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+h3 {
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+tree {}
+
+canvas {
+    max-width: 90%;
+    margin-left: 5%;
+    margin-top: 5rem;
+    position: relative;
+    background-color: #ccd;
+}
+
+form {
+    max-width: 40%;
+    margin: 1rem auto;
+    font-size: 26px;
+    padding: 1rem;
+    background-color: var(--default-bg);
+}
+
+#input-type-wrapper {
+    width: fit-content;
+    background-color: var(--default-bg);
+    padding: 1rem;
+    margin: auto;
+    margin-top: 2rem;
+    border-radius: 4px;
+}
+
+#input-type-wrapper input[type=radio] {
+    display: none;
+}
+
+#text-input-container {
+    width: 60%;
+    font-family: 'Share Tech Mono';
+    background-color: var(--default-bg);
+    border-radius: 4px;
+    padding: 1rem;
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+#text-input-container textarea {
+    height: 10rem;
+}
+
+#text-input-container label {
+    display: block;
+}
+
+#url-input-wrapper {
+    display: flex;
+    width: fit-content;
+    margin: auto;
+    max-width: 90%;
+}
+
+#url-input-container {
+    background-color: var(--default-bg);
+    border-radius: 4px;
+    max-width: 40%;
+    height: fit-content;
+    padding: 1rem;
+    margin: 2rem 2rem;
+}
+
+#csv-preview-container {
+    max-width: 60%;
+    text-align: center;
+    display: none;
+    font-family: 'Share Tech Mono';
+}
+
+#config {
+    margin-top: 2rem;
+}
+
+#csv-preview {
+    height: 10rem;
+    overflow-y: scroll;
+    background-color: var(--default-bg);
+    border-radius: 4px;
+    padding: 0.5rem;
+    width: 100%;
+    text-align: left;
+}
+
+#attribute-container {
+    margin: 1rem auto;
+    max-width: fit-content;
+}
+
+#attributes-table {
+    background-color: var(--default-bg);
+    border-radius: 4px;
+    padding: 0.5rem;
+}
+
+#attributes-table th {
+    max-width: 33%;
+    padding: 0.25rem 1rem;
+}
+
+input,
+button {
+    margin: 4px 0;
+}
+
+input[type=checkbox],
+input[type=radio] {
+    appearance: none;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    background-color: var(--input-bg);
+}
+
+input[type=checkbox] {
+    border-radius: 2px;
+}
+
+input[type=radio] {
+    border-radius: 32px;
+}
+
+input[type=checkbox]:checked,
+input[type=radio]:checked {
+    border: 5px solid var(--input-bg);
+    background-color: #667;
+}
+
+input[type=range] {
+    width: 90%;
+}
+
+input[type=text], textarea, #text-input {
+    appearance: none;
+    outline: none;
+    border: none;
+    background-color: var(--input-bg);
+    color: #fff;
+    font-family: 'Share Tech';
+    border-radius: 4px;
+    padding: 2px 4px;
+    width: 100%;
+    font-size: 16px;
+}
+
+#file-container {
+    width: fit-content;
+    display: inline;
+}
+
+input[type="file"] {
+    appearance: none;
+    display: none;
+}
+
+#file-container label, #input-type-wrapper label {
+    padding: 2px 4px;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+    background-color: var(--input-bg);
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+}
+
+button {
+    appearance: none;
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: var(--input-bg);
+    color: #fff;
+    font-family: 'Share Tech';
+    font-weight: bold;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 2px 4px;
+    cursor: pointer;
+}
+
+button:hover,
+#file-container label:hover,
+#input-type-wrapper label:hover {
+    background-color: rgb(105, 105, 255);
+    border: 1px solid rgba(255, 255, 255, 0.007);
+}
+
+#data-ratio-container {
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    vertical-align: center;
+    background-color: var(--default-bg);
+    border-radius: 4px;
+    padding: 0.5rem;
+}
+
+#actions {
+    width: fit-content;
+    min-width: 30%;
+    margin: 2rem auto;
+    text-align: center;
+    background-color: var(--default-bg);
+    border-radius: 4px;
+    padding: 4px 1rem;
+    border-radius: 100px;
+}
+
+#accuracy {
+    text-align: center;
+}
+
+#hidden {
+    display: none;
+}

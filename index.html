@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PRG8 week 5</title>
+    <script src="https://unpkg.com/papaparse@5.3.2/papaparse.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script type="module" src="js/index.js"></script>
+    <link rel="stylesheet" href="css/style.css"></link>
+</head>
+<body>
+    <div id="input-type-wrapper">
+        <h3>Select input type</h3>
+        <label for="input-type-url">Url</label>
+        <input type="radio" name="input-type" id="input-type-url" value="url">
+        <label for="input-type-text">Text</label>
+        <input type="radio" name="input-type" id="input-type-text" value="text">
+    </div>
+    <div id="csv-input-container">
+        <div id="url-input-wrapper" style="display: none">
+            <div id="url-input-container">
+                <label for="url-input">url: </label>
+                <input type="text" id="url-input">
+                <button id="fetch-url-data">Fetch Data</button>
+            </div>
+            <div id="csv-preview-container">
+                Data Preview
+                <div id="csv-preview">
+                </div>
+            </div>
+        </div>
+        <div id="text-input-container" style="display: none">
+            <label for="text-input">data: </label>
+            <textarea id="text-input"></textarea>
+            <button id="text-confirm">Load Data</button>
+        </div>
+    </div>
+    <div id="hidden">
+
+        <div id="config">
+            <h1>Config</h1>
+            <div id="csv-data-container">
+                <div id="attribute-container">
+                    <table id="attributes-table">
+                        <tr>
+                            <th>Target</th>
+                            <th>Ignore</th>
+                            <th>Attribute</th>
+                            <th>Example</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+    
+            <div id="data-ratio-container">
+                <p id="ratio-desc">Traindata: - TestData:</p>
+                <input id="data-ratio" type="range" min="1" max="99" value=50>
+            </div>
+        </div>
+        
+        <div id="actions">
+            <button id="train-btn">Train Data</button>
+            <button id="test-btn">Test Data</button>
+            <button id="download-btn">Download Tree</button>
+            <div id="file-container">
+                <label for="tree-file">Upload Tree</label>
+                <input accept="text/*,.json" type="file" id="tree-file" name="tree-file"></input>
+            </div>
+        </div>
+        <p id="accuracy"></p>
+    
+        <tree>
+    
+        </tree>
+    </div>
+</body>
+</html>
