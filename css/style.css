@@ -94,6 +94,7 @@ form {
     width: fit-content;
     margin: auto;
     max-width: 90%;
+    margin-top: 2rem;
 }
 
 #url-input-container {
